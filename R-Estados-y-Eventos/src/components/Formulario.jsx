@@ -16,11 +16,18 @@ const Formulario = ( {Alert} ) => {
             Alert('Debe completar todos los campos.');
         } else if (contraseña !== confiCont) {
             Alert('Las contraseñas no coinciden.');
+        } else if (!emailRegistro(email)) {
+            Alert('Formato de correo inválido');
         } else {
             Alert('¡Felicitaciones, te registraste exitosamente!');
         };
     };
 
+    const emailRegistro = (email) => {
+        const expresionCorreo =  /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+        return expresionCorreo.test(email);
+    };
+      
     return (
         <>
             <form onSubmit={validarDatos}>
@@ -49,7 +56,7 @@ const Formulario = ( {Alert} ) => {
                     onChange={(e) => setConfiCont(e.target.value)}
                     value={confiCont}/>
 
-                    <Button variant='success' type="submit">Enviar</Button>
+                    <Button variant='flat' type="submit">Enviar</Button>
                 </div>
             </form>
         </>

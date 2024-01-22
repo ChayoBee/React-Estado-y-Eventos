@@ -15,7 +15,7 @@ function Registro () {
     return (
         <>
             <div className="content-style">
-                <SocialButton icons = {logos} />
+                <SocialButton icon = {logos} />
                 <Alert alerta = {alert} />
                 <Formulario Alert = {mensajeAlerta} />
             </div>

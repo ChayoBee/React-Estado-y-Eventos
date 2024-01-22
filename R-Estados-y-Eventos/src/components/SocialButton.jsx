@@ -2,8 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './SocialButton.css';
 
-const SocialButton = ( {icono} ) => {
-    const [facebook, github, linkedin] = icono;
+const SocialButton = ( {icon} ) => {
+    const [facebook, github, linkedin] = icon;
 
     return (
         <>
